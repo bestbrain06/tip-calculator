@@ -7,6 +7,51 @@
     <title>Tip Calculator</title>
   </head>
   <body>
+    <div class="container">
+      <main>
+        <h1>SPLI<br />TTER</h1>
+
+        <div class="card">
+          <div class="calculator-input-container">
+            <label for="bill">Bill</label>
+            <input id="bill" type="text" placeholder="0" />
+
+            <p class="tip-text">Select Tip %</p>
+            <div class="tip-container">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input type="text" placeholder="Custom" />
+            </div>
+
+            <label for="people">Number of people</label>
+            <input id="people" type="text" placeholder="0" />
+          </div>
+
+          <div class="calculator-result-container">
+            <div class="tip-amount-container">
+              <div>
+                <h2 class="tip-amount-text">Tip Amount</h2>
+                <p class="number-of-people">/ Person</p>
+              </div>
+              <span class="tip-amount">0.00</span>
+            </div>
+
+            <div class="total-amount-container">
+              <div>
+                <h2 class="total-amount-text">Tip Total</h2>
+                <p class="number-of-people">/ Person</p>
+              </div>
+              <span class="total-amount">0.00</span>
+            </div>
+
+            <button class="reset-button" type="reset">Reset</button>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
