@@ -3,48 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link to google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link to css -->
     <link rel="stylesheet" href="style.css" />
     <title>Tip Calculator</title>
   </head>
   <body>
     <div class="container">
       <main>
-        <h1>SPLI<br />TTER</h1>
+        <h1 class="heading">SPLI<br />TTER</h1>
 
         <div class="card">
           <div class="calculator-input-container">
-            <label for="bill">Bill</label>
-            <input id="bill" type="text" placeholder="0" />
+            <label class="bill-label" for="bill">Bill</label>
+            <input class="bill-input" id="bill" type="text" placeholder="0" />
 
             <p class="tip-text">Select Tip %</p>
             <div class="tip-container">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <input type="text" placeholder="Custom" />
+              <button class="tip-btn">5%</button>
+              <button class="tip-btn">10%</button>
+              <button class="tip-btn">15%</button>
+              <button class="tip-btn">25%</button>
+              <button class="tip-btn">50%</button>
+              <input class="custom-tip" type="text" placeholder="Custom" />
             </div>
 
-            <label for="people">Number of people</label>
-            <input id="people" type="text" placeholder="0" />
+            <div class="wrapper-text">
+              <label class="people-label" for="people">Number of people</label>
+              <small class="error-text">Can't be zero</small>
+            </div>
+            <input
+              class="people-input"
+              id="people"
+              type="text"
+              placeholder="0"
+            />
           </div>
 
           <div class="calculator-result-container">
-            <div class="tip-amount-container">
-              <div>
-                <h2 class="tip-amount-text">Tip Amount</h2>
-                <p class="number-of-people">/ Person</p>
+            <div>
+              <div class="amount-container amount-container-tip">
+                <div>
+                  <h2 class="amount-text">Tip Amount</h2>
+                  <p class="number-of-people">/ Person</p>
+                </div>
+                <span class="amount-number">0.00</span>
               </div>
-              <span class="tip-amount">0.00</span>
-            </div>
 
-            <div class="total-amount-container">
-              <div>
-                <h2 class="total-amount-text">Tip Total</h2>
-                <p class="number-of-people">/ Person</p>
+              <div class="amount-container amount-container-total">
+                <div>
+                  <h2 class="amount-text">Tip Total</h2>
+                  <p class="number-of-people">/ Person</p>
+                </div>
+                <span class="amount-number">0.00</span>
               </div>
-              <span class="total-amount">0.00</span>
             </div>
 
             <button class="reset-button" type="reset">Reset</button>
