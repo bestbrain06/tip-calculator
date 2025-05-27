@@ -44,7 +44,7 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
 }
 
 h1 {
@@ -63,6 +63,10 @@ label {
   color: var(--green-900);
   font-size: var(--fs-sm);
   font-weight: var(--fw-bold);
+}
+
+input {
+  width: 100%;
 }
 
 /* CARD */
@@ -257,8 +261,7 @@ label {
 @media (max-width: 50rem) {
   .card {
     grid-template-columns: 1fr;
-    column-gap: 0;
-    padding: 3rem;
+    row-gap: 10rem;
   }
 
   .tip-container {
