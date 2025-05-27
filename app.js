@@ -7,21 +7,25 @@ const displayTipAmount = document.querySelector(".tip-amount");
 const displayTotalAmount = document.querySelector(".total-amount");
 const resetBtn = document.querySelector(".reset-button");
 
+// DATA
 let billAmount = 0;
 let tipPercent = 0;
 let numberofPeople = 1;
 let currentActiveTipBtn = null;
 
+// USER INPUT FOR BILL AMOUNT
 billInput.addEventListener("input", () => {
   billAmount = Number(billInput.value);
   tipCalculator();
 });
 
+// USER INPUT FOR THE NUMBER OF PEOPLE
 peopleInput.addEventListener("input", () => {
   numberofPeople = Number(peopleInput.value);
   tipCalculator();
 });
 
+// TIPS BUTTONS
 tipBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.classList.add("active");
@@ -34,6 +38,7 @@ tipBtns.forEach((btn) => {
   });
 });
 
+// CUSTOM TIP FOR USER
 customTip.addEventListener("input", () => {
   tipPercent = Number(customTip.value);
 
@@ -41,6 +46,7 @@ customTip.addEventListener("input", () => {
   tipCalculator();
 });
 
+// TIP CALCULATOR FUNCTION
 function tipCalculator() {
   if (numberofPeople < 0) {
     errorMessage.classList.add("error-text");
@@ -65,10 +71,12 @@ function tipCalculator() {
   displayTotalAmount.textContent = total.toFixed(2);
 }
 
+// RESET BUTTON
 resetBtn.addEventListener("click", () => {
   reset();
 });
 
+// RESET BUTTON FUNCTION
 function reset() {
   billInput.value = " ";
   peopleInput.value = " ";
@@ -78,6 +86,7 @@ function reset() {
   removeActiveBtn();
 }
 
+// ACTIVE TIP BUTTON
 function activeTipBtn(newActiveTipBtn) {
   if (currentActiveTipBtn) {
     currentActiveTipBtn.classList.remove("active-tip-btn");
@@ -88,6 +97,7 @@ function activeTipBtn(newActiveTipBtn) {
   currentActiveTipBtn = newActiveTipBtn;
 }
 
+// REMOVE ACTIVE BUTTON
 function removeActiveBtn() {
   tipBtns.forEach((btn) => {
     btn.classList.remove("active-tip-btn");
