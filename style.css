@@ -169,16 +169,6 @@ label {
   align-items: center;
 }
 
-.error-text {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-bold);
-  color: #d33434;
-}
-
-.error {
-  outline: 2px solid #d33434;
-}
-
 .people-label {
   margin-bottom: 0.5rem;
 }
@@ -231,4 +221,25 @@ label {
 
 .reset-button:hover {
   background-color: var(--grey-200);
+}
+
+/* ERROR STATE */
+.error-message {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: #d33434;
+  display: none;
+}
+
+.people-input:focus.error {
+  outline: 2px solid #d33434;
+}
+
+.error-text {
+  display: block;
+}
+
+.active-tip-btn {
+  background-color: var(--green-400);
+  color: var(--green-900);
 }

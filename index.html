@@ -28,17 +28,17 @@
 
             <p class="tip-text">Select Tip %</p>
             <div class="tip-container">
-              <button class="tip-btn">5%</button>
-              <button class="tip-btn">10%</button>
-              <button class="tip-btn">15%</button>
-              <button class="tip-btn">25%</button>
-              <button class="tip-btn">50%</button>
+              <button class="tip-btn" value="5">5%</button>
+              <button class="tip-btn" value="10">10%</button>
+              <button class="tip-btn" value="15">15%</button>
+              <button class="tip-btn" value="25">25%</button>
+              <button class="tip-btn" value="50">50%</button>
               <input class="custom-tip" type="text" placeholder="Custom" />
             </div>
 
             <div class="wrapper-text">
               <label class="people-label" for="people">Number of people</label>
-              <small class="error-text">Can't be zero</small>
+              <small class="error-message">Can't be zero</small>
             </div>
             <input
               class="people-input"
@@ -55,7 +55,7 @@
                   <h2 class="amount-text">Tip Amount</h2>
                   <p class="number-of-people">/ Person</p>
                 </div>
-                <span class="amount-number">0.00</span>
+                <span class="amount-number tip-amount">0.00</span>
               </div>
 
               <div class="amount-container amount-container-total">
@@ -63,7 +63,7 @@
                   <h2 class="amount-text">Tip Total</h2>
                   <p class="number-of-people">/ Person</p>
                 </div>
-                <span class="amount-number">0.00</span>
+                <span class="amount-number total-amount">0.00</span>
               </div>
             </div>
 
