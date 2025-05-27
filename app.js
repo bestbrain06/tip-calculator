@@ -42,8 +42,14 @@ customTip.addEventListener("input", () => {
 });
 
 function tipCalculator() {
-  if (numberofPeople === 0) {
+  if (numberofPeople < 0) {
     errorMessage.classList.add("error-text");
+    errorMessage.textContent = "can't be negative";
+    peopleInput.classList.add("error");
+    return;
+  } else if (numberofPeople === 0) {
+    errorMessage.classList.add("error-text");
+    errorMessage.textContent = "Can't be zero";
     peopleInput.classList.add("error");
 
     return;
