@@ -48,6 +48,11 @@ customTip.addEventListener("input", () => {
 
 // TIP CALCULATOR FUNCTION
 function tipCalculator() {
+  if (billInput.value < 0) {
+    billInput.value = "0";
+    return;
+  }
+
   if (numberofPeople < 0) {
     errorMessage.classList.add("error-text");
     errorMessage.textContent = "can't be negative";
