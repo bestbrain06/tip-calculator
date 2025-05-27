@@ -24,7 +24,13 @@
         <div class="card">
           <div class="calculator-input-container">
             <label class="bill-label" for="bill">Bill</label>
-            <input class="bill-input" id="bill" type="number" placeholder="0" />
+            <input
+              class="bill-input"
+              id="bill"
+              type="number"
+              placeholder="0"
+              min="0"
+            />
 
             <p class="tip-text">Select Tip %</p>
             <div class="tip-container">
@@ -33,7 +39,12 @@
               <button class="tip-btn" value="15">15%</button>
               <button class="tip-btn" value="25">25%</button>
               <button class="tip-btn" value="50">50%</button>
-              <input class="custom-tip" type="numbrt" placeholder="Custom" />
+              <input
+                class="custom-tip"
+                type="numbrt"
+                placeholder="Custom"
+                min="0"
+              />
             </div>
 
             <div class="wrapper-text">
@@ -45,6 +56,8 @@
               id="people"
               type="number"
               placeholder="0"
+              min="0"
+              max="50"
             />
           </div>
 
