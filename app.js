@@ -65,7 +65,7 @@ function tipCalculator() {
   }
 
   let tip = (billAmount * (tipPercent / 100)) / numberofPeople;
-  let total = (billAmount + tip) / numberofPeople;
+  let total = (billAmount + billAmount * (tipPercent / 100)) / numberofPeople;
 
   displayTipAmount.textContent = tip.toFixed(2);
   displayTotalAmount.textContent = total.toFixed(2);
